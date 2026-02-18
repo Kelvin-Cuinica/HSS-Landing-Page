@@ -1,0 +1,1419 @@
+<!doctype html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HSS - Segurança e Automação | Moçambique</title>
+    <meta name="description"
+        content="Soluções integradas de segurança CCTV, rastreamento veicular, casas inteligentes, automação e instalação de vedações elétricas. Mais de 10 anos de experiência em Moçambique." />
+    <meta name="author" content="HSS" />
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+    <!-- ------------------>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="HSS - Segurança e Automação" />
+    <meta property="og:description"
+        content="Soluções integradas de segurança CCTV, rastreamento veicular, casas inteligentes, automação e instalação de vedações elétricas em Moçambique." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@HSS" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ["class"],
+            theme: {
+                extend: {
+                    colors: {
+                        border: "hsl(var(--border))",
+                        input: "hsl(var(--input))",
+                        ring: "hsl(var(--ring))",
+                        background: "hsl(var(--background))",
+                        foreground: "hsl(var(--foreground))",
+                        primary: {
+                            DEFAULT: "hsl(var(--primary))",
+                            foreground: "hsl(var(--primary-foreground))"
+                        },
+                        secondary: {
+                            DEFAULT: "hsl(var(--secondary))",
+                            foreground: "hsl(var(--secondary-foreground))"
+                        },
+                        destructive: {
+                            DEFAULT: "hsl(var(--destructive))",
+                            foreground: "hsl(var(--destructive-foreground))"
+                        },
+                        muted: {
+                            DEFAULT: "hsl(var(--muted))",
+                            foreground: "hsl(var(--muted-foreground))"
+                        },
+                        accent: {
+                            DEFAULT: "hsl(var(--accent))",
+                            foreground: "hsl(var(--accent-foreground))"
+                        },
+                        popover: {
+                            DEFAULT: "hsl(var(--popover))",
+                            foreground: "hsl(var(--popover-foreground))"
+                        },
+                        card: {
+                            DEFAULT: "hsl(var(--card))",
+                            foreground: "hsl(var(--card-foreground))"
+                        },
+                        sidebar: {
+                            DEFAULT: "hsl(var(--sidebar-background))",
+                            foreground: "hsl(var(--sidebar-foreground))",
+                            primary: "hsl(var(--sidebar-primary))",
+                            "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+                            accent: "hsl(var(--sidebar-accent))",
+                            "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+                            border: "hsl(var(--sidebar-border))",
+                            ring: "hsl(var(--sidebar-ring))"
+                        },
+                    },
+                    borderRadius: {
+                        lg: "var(--radius)",
+                        md: "calc(var(--radius) - 2px)",
+                        sm: "calc(var(--radius) - 4px)",
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        :root {
+            --background: 0 0% 100%;
+            --foreground: 220 26% 14%;
+            --card: 0 0% 100%;
+            --card-foreground: 220 26% 14%;
+            --popover: 0 0% 100%;
+            --popover-foreground: 220 26% 14%;
+            --primary: 20 92% 59%;
+            --primary-foreground: 0 0% 100%;
+            --secondary: 220 26% 14%;
+            --secondary-foreground: 0 0% 100%;
+            --muted: 210 40% 96.1%;
+            --muted-foreground: 215.4 16.3% 46.9%;
+            --accent: 20 92% 59%;
+            --accent-foreground: 0 0% 100%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 0 0% 100%;
+            --border: 214.3 31.8% 91.4%;
+            --input: 214.3 31.8% 91.4%;
+            --ring: 20 92% 59%;
+            --radius: 0.375rem;
+            --section-bg: 245 40% 98%;
+            --navy: 220 26% 14%;
+            --sidebar-background: 0 0% 98%;
+            --sidebar-foreground: 240 5.3% 26.1%;
+            --sidebar-primary: 240 5.9% 10%;
+            --sidebar-primary-foreground: 0 0% 98%;
+            --sidebar-accent: 240 4.8% 95.9%;
+            --sidebar-accent-foreground: 240 5.9% 10%;
+            --sidebar-border: 220 13% 91%;
+            --sidebar-ring: 217.2 91.2% 59.8%;
+        }
+
+        .dark {
+            --background: 220 26% 14%;
+            --foreground: 0 0% 100%;
+            --card: 220 26% 18%;
+            --card-foreground: 0 0% 100%;
+            --popover: 220 26% 18%;
+            --popover-foreground: 0 0% 100%;
+            --primary: 20 92% 59%;
+            --primary-foreground: 0 0% 100%;
+            --secondary: 220 26% 22%;
+            --secondary-foreground: 0 0% 100%;
+            --muted: 220 26% 22%;
+            --muted-foreground: 215 20.2% 65.1%;
+            --accent: 20 92% 59%;
+            --accent-foreground: 0 0% 100%;
+            --destructive: 0 62.8% 30.6%;
+            --destructive-foreground: 0 0% 100%;
+            --border: 220 26% 22%;
+            --input: 220 26% 22%;
+            --ring: 20 92% 59%;
+            --sidebar-background: 240 5.9% 10%;
+            --sidebar-foreground: 240 4.8% 95.9%;
+            --sidebar-primary: 224.3 76.3% 48%;
+            --sidebar-primary-foreground: 0 0% 100%;
+            --sidebar-accent: 240 3.7% 15.9%;
+            --sidebar-accent-foreground: 240 4.8% 95.9%;
+            --sidebar-border: 240 3.7% 15.9%;
+            --sidebar-ring: 217.2 91.2% 59.8%;
+        }
+
+        * {
+            border-color: hsl(var(--border));
+        }
+
+        body {
+            background-color: hsl(var(--background));
+            color: hsl(var(--foreground));
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: bold;
+        }
+
+        .section-padding {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+
+        @media (min-width: 768px) {
+            .section-padding {
+                padding-top: 6rem;
+                padding-bottom: 6rem;
+            }
+        }
+
+        .container-custom {
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .container-custom {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container-custom {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+
+        .hover-lift {
+            transition-property: transform;
+            transition-duration: 300ms;
+        }
+
+        .hover-lift:hover {
+            --tw-translate-y: -0.5rem;
+            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+        }
+
+        .bg-section {
+            background-color: hsl(var(--section-bg));
+        }
+
+        .bg-gradient-hero {
+            background-color: #EE7A2D;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="w-full bg-white shadow-sm sticky top-0 z-50">
+        <div class="bg-primary text-white py-2">
+            <div class="container-custom flex justify-between items-center text-sm">
+                <div class="flex gap-6">
+                    <a href="tel:+258875070797" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <span>+258 87 507 0797</span>
+                    </a>
+                    <a href="mailto:hss2service@gmail.com"
+                        class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <span>hss2service@gmail.com</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center gap-4 text-xs">
+                    <span>FAQ</span>
+                    <span>Linktree</span>
+                    <span>Português</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-custom py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <div class=" rounded-full flex items-center justify-center">
+                        <img src="3 - sem fundo.png" alt="" style="width: 75px; height: 75px;">
+                    </div>
+                    <span class="text-1xl font-bold text-secondary">HERBET SECURITY E SERVICE E.I</span>
+                </div>
+
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="#inicio" class="text-secondary hover:text-primary transition-colors font-medium">
+                        INÍCIO
+                    </a>
+                    <a href="#sobre" class="text-secondary hover:text-primary transition-colors font-medium">
+                        SOBRE NÓS
+                    </a>
+                    <a href="#servicos" class="text-secondary hover:text-primary transition-colors font-medium">
+                        SERVIÇOS
+                    </a>
+                    <a href="#produtos" class="text-secondary hover:text-primary transition-colors font-medium">
+                        PRODUTOS
+                    </a>
+                    <a href="#portfolio" class="text-secondary hover:text-primary transition-colors font-medium">
+                        PORTFÓLIO
+                    </a>
+                    <a href="#contacto" class="text-secondary hover:text-primary transition-colors font-medium">
+                        CONTACTO
+                    </a>
+                </nav>
+
+                <div class="flex items-center gap-4">
+                    <button
+                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg h-12 rounded-md px-8 text-base hidden md:flex">
+                        Fale Connosco
+                    </button>
+                    <button class="lg:hidden text-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"
+                            class="w-6 h-6">
+                            <path fill="currentColor"
+                                d="M5 6h14a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Zm0 6h14a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Zm0 6h14a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <nav class="lg:hidden flex flex-col gap-4 mt-6 pb-4 hidden">
+                <a href="#inicio" class="text-secondary hover:text-primary transition-colors font-medium">
+                    INÍCIO
+                </a>
+                <a href="#sobre" class="text-secondary hover:text-primary transition-colors font-medium">
+                    SOBRE NÓS
+                </a>
+                <a href="#servicos" class="text-secondary hover:text-primary transition-colors font-medium">
+                    SERVIÇOS
+                </a>
+                <a href="#produtos" class="text-secondary hover:text-primary transition-colors font-medium">
+                    PRODUTOS
+                </a>
+                <a href="#portfolio" class="text-secondary hover:text-primary transition-colors font-medium">
+                    PORTFÓLIO
+                </a>
+                <a href="#contacto" class="text-secondary hover:text-primary transition-colors font-medium">
+                    CONTACTO
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HeroSection -->
+    <section class="relative h-[600px] md:h-[700px] flex items-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('security-camera-outdoor.jpg')">
+            <div class="absolute inset-0"></div>
+        </div>
+
+        <div class="container-custom relative z-10 text-white">
+            <div class="max-w-3xl">
+                <p class="text-sm md:text-base uppercase tracking-wider mb-4 font-medium">
+                    Solução sólida para sua casa e escritório
+                </p>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                    Proteja seu Escritório e Casa
+                </h1>
+                <p class="text-lg md:text-xl mb-8 text-white/90 max-w-2xl">
+                    A sua tranquilidade é a nossa maior prioridade.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="tel:+258875070797">
+                        <button
+                            class="border-2 border-white bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-primary shadow-lg inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 text-base h-12 rounded-md px-8">
+                            Entre em Contacto
+                        </button>
+                    </a>
+                    <a href="#servicos">
+                        <button
+                            class="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:shadow-xl hover:scale-105 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 text-base h-12 rounded-md px-8">
+                            Nossos Serviços
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 right-0 h-20 bg-white"></div>
+    </section>
+
+    <!-- AboutSection -->
+    <section id="sobre" class="section-padding bg-white">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <p class="text-primary text-sm uppercase tracking-wider mb-2 font-semibold">SOBRE NÓS</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-secondary mb-6">
+                    Saiba Mais Sobre a HSS
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-muted-foreground text-lg mb-8 leading-relaxed text-justify">
+                        A HSS é uma empresa moçambicana de referência, com mais de 10 anos de
+                        experiência na área de segurança eletrónica, automação residencial e soluções
+                        tecnológicas inteligentes. Atuamos com foco na inovação e excelência, oferecendo
+                        serviços modernos e eficientes que garantem proteção, conforto e controlo para
+                        residências, empresas e instituições.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <span class="font-bold text-primary">Ideais da Empresa</span>
+                        <div class="flex gap-4 items-start group hover:translate-x-2 transition-transform duration-300">
+                            <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                            <div>
+                                <span class="font-bold text-secondary">Qualidade e Confiança:</span>
+                                <span class="text-muted-foreground ml-2">Garantir serviços e produtos que transmitam
+                                    segurança, credibilidade e
+                                    satisfação aos nossos clientes.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start group hover:translate-x-2 transition-transform duration-300">
+                            <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                            <div>
+                                <span class="font-bold text-secondary">Inovação Constante:</span>
+                                <span class="text-muted-foreground ml-2">Investir continuamente em tecnologia e
+                                    conhecimento
+                                    para oferecer soluções de segurança inteligentes e modernas.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start group hover:translate-x-2 transition-transform duration-300">
+                            <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                            <div>
+                                <span class="font-bold text-secondary">Proximidade com o Cliente:</span>
+                                <span class="text-muted-foreground ml-2">Manter uma comunicação clara e um
+                                    relacionamento
+                                    duradouro, baseado na confiança e no compromisso.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start group hover:translate-x-2 transition-transform duration-300">
+                            <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                            <div>
+                                <span class="font-bold text-secondary">Excelência Operacional:</span>
+                                <span class="text-muted-foreground ml-2">Assegurar eficiência em todos os processos,
+                                    desde
+                                    o atendimento até à execução técnica.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/+258875070797?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços."
+                        target="_blank">
+                        <button
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg h-12 rounded-md px-8">
+                            Saber Mais
+                        </button>
+                    </a>
+                </div>
+
+                <div class="relative">
+                    <div class="aspect-square bg-section rounded-2xl overflow-hidden shadow-2xl">
+                        <div class="w-full h-full flex items-center justify-center bg-top bg-cover bg-no-repeat"
+                            style="background-image: url('Media/5.jpg')">
+                            <div class="text-center p-8">
+                                <div class="text-6xl font-bold text-primary mb-4">+10</div>
+                                <div class="text-2xl font-semibold text-white">Anos de Experiência</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ServicesSection -->
+    <section id="servicos" class="section-padding bg-section">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <p class="text-primary text-sm uppercase tracking-wider mb-2 font-semibold">SERVIÇOS</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-secondary mb-6">
+                    O Que Oferecemos
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <div class="rounded-lg border bg-card text-card-foreground shadow-sm hover-lift border-none shadow-lg">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <div class="aspect-video bg-primary rounded-lg bg-center bg-cover bg-no-repeat"
+                            style="background-image: url('Media/17.jpg')"></div>
+                        <h3 class="text-xl font-bold text-secondary">Sistema de CCTV Individual e Comercial</h3>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <p class="text-muted-foreground mb-6 text-justify">Projetado para pequenos escritórios,
+                            empresas, condomínios e espaços públicos,
+                            garantindo segurança e supervisão permanente através de um sistema robusto de câmaras de
+                            alta definição.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em"
+                                    viewBox="0 0 24 24" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5">
+                                    <path fill="currentColor"
+                                        d="M9.78 18.65l.28-4.23l7.68-6.92a.5.5 0 0 0-.81-.58L10.28 14L6.11 10.03a.5.5 0 0 0-.76 0a.5.5 0 0 0 0 .71l4.18 3.67l-3.69 5.19a.5.5 0 1 0 .9.44Z" />
+                                </svg>
+                                <span class="text-sm text-muted-foreground">Planeamento técnico e instalação
+                                    profissional</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em"
+                                    viewBox="0 0 24 24" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5">
+                                    <path fill="currentColor"
+                                        d="M9.78 18.65l.28-4.23l7.68-6.92a.5.5 0 0 0-.81-.58L10.28 14L6.11 10.03a.5.5 0 0 0-.76 0a.5.5 0 0 0 0 .71l4.18 3.67l-3.69 5.19a.5.5 0 1 0 .9.44Z" />
+                                </svg>
+                                <span class="text-sm text-muted-foreground">Configuração completa e testes de
+                                    desempenho</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em"
+                                    viewBox="0 0 24 24" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5">
+                                    <path fill="currentColor"
+                                        d="M9.78 18.65l.28-4.23l7.68-6.92a.5.5 0 0 0-.81-.58L10.28 14L6.11 10.03a.5.5 0 0 0-.76 0a.5.5 0 0 0 0 .71l4.18 3.67l-3.69 5.19a.5.5 0 1 0 .9.44Z" />
+                                </svg>
+                                <span class="text-sm text-muted-foreground">Suporte 24/7</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em"
+                                    viewBox="0 0 24 24" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5">
+                                    <path fill="currentColor"
+                                        d="M9.78 18.65l.28-4.23l7.68-6.92a.5.5 0 0 0-.81-.58L10.28 14L6.11 10.03a.5.5 0 0 0-.76 0a.5.5 0 0 0 0 .71l4.18 3.67l-3.69 5.19a.5.5 0 1 0 .9.44Z" />
+                                </svg>
+                                <span class="text-sm text-muted-foreground">Monitoramento remoto e armazenamento seguro
+                                    de dados</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="rounded-lg border bg-card text-card-foreground shadow-sm hover-lift border-none shadow-lg">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <div class="aspect-video bg-primary rounded-lg bg-center bg-cover bg-no-repeat"
+                            style="background-image: url('Media/29.jpg')"></div>
+                        <h3 class="text-xl font-bold text-secondary">Sistema de Gestão de Frotas</h3>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <p class="text-muted-foreground mb-6 text-justify">Solução completa para monitoramento e
+                            controlo de veículos pessoais e
+                            corporativos, desenvolvida para aumentar a eficiência operacional, reduzir custos e garantir
+                            maior segurança nas operações logísticas.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em"
+                                    viewBox="0 0 24 24" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5">
+                                    <path fill="currentColor"
+                                        d="M9.78 18.65l.28-4.23l7.68-6.92a.5.5 0 0 0-.81-.58L10.28 14L6.11 10.03a.5.5 0 0 0-.76 0a.5.5 0 0 0 0 .71l4.18 3.67l-3.69 5.19a.5.5 0 1 0 .9.44Z" />
+                                </svg>
+                                <span class="text-sm text-muted-foreground">Instalação de dispositivos GPS com
+                                    comunicação em tempo real</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em"
+                                    viewBox="0 0 24 24" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5">
+                                    <path fill="currentColor"
+                                        d="M9.78 18.65l.28-4.23l7.68-6.92a.5.5 0 0 0-.81-.58L10.28 14L6.11 10.03a.5.5 0 0 0-.76 0a.5.5 0 0 0 0 .71l4.18 3.67l-3.69 5.19a.5.5 0 1 0 .9.44Z" />
+                                </svg>
+                                <span class="text-sm text-muted-foreground">Monitoramento online através de aplicação
+                                    móvel</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em"
+                                    viewBox="0 0 24 24" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5">
+                                    <path fill="currentColor"
+                                        d="M9.78 18.65l.28-4.23l7.68-6.92a.5.5 0 0 0-.81-.58L10.28 14L6.11 10.03a.5.5 0 0 0-.76 0a.5.5 0 0 0 0 .71l4.18 3.67l-3.69 5.19a.5.5 0 1 0 .9.44Z" />
+                                </svg>
+                                <span class="text-sm text-muted-foreground">Relatórios detalhados de rotas, velocidades,
+                                    paragens e consumo</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em"
+                                    viewBox="0 0 24 24" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5">
+                                    <path fill="currentColor"
+                                        d="M9.78 18.65l.28-4.23l7.68-6.92a.5.5 0 0 0-.81-.58L10.28 14L6.11 10.03a.5.5 0 0 0-.76 0a.5.5 0 0 0 0 .71l4.18 3.67l-3.69 5.19a.5.5 0 1 0 .9.44Z" />
+                                </svg>
+                                <span class="text-sm text-muted-foreground">Suporte técnico e assistência
+                                    contínua</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="rounded-lg border bg-card text-card-foreground shadow-sm hover-lift border-none shadow-lg">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <div class="aspect-video bg-primary rounded-lg bg-center bg-cover bg-no-repeat"
+                            style="background-image: url('Media/testeira-1.png')"></div>
+                        <h3 class="text-xl font-bold text-secondary">Segurança para Casas, Escritórios e Indústrias</h3>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <p class="text-muted-foreground mb-6 text-justify">Soluções integradas de vigilância, alarme e
+                            controlo de acessos,
+                            adaptadas a cada necessidade.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em"
+                                    viewBox="0 0 24 24" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5">
+                                    <path fill="currentColor"
+                                        d="M9.78 18.65l.28-4.23l7.68-6.92a.5.5 0 0 0-.81-.58L10.28 14L6.11 10.03a.5.5 0 0 0-.76 0a.5.5 0 0 0 0 .71l4.18 3.67l-3.69 5.19a.5.5 0 1 0 .9.44Z" />
+                                </svg>
+                                <span class="text-sm text-muted-foreground">Avaliação e deslocação técnica</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em"
+                                    viewBox="0 0 24 24" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5">
+                                    <path fill="currentColor"
+                                        d="M9.78 18.65l.28-4.23l7.68-6.92a.5.5 0 0 0-.81-.58L10.28 14L6.11 10.03a.5.5 0 0 0-.76 0a.5.5 0 0 0 0 .71l4.18 3.67l-3.69 5.19a.5.5 0 1 0 .9.44Z" />
+                                </svg>
+                                <span class="text-sm text-muted-foreground">Instalação de sistemas personalizados</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em"
+                                    viewBox="0 0 24 24" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5">
+                                    <path fill="currentColor"
+                                        d="M9.78 18.65l.28-4.23l7.68-6.92a.5.5 0 0 0-.81-.58L10.28 14L6.11 10.03a.5.5 0 0 0-.76 0a.5.5 0 0 0 0 .71l4.18 3.67l-3.69 5.19a.5.5 0 1 0 .9.44Z" />
+                                </svg>
+                                <span class="text-sm text-muted-foreground">Suporte contínuo e manutenção
+                                    periódica</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em"
+                                    viewBox="0 0 24 24" class="w-5 h-5 text-primary flex-shrink-0 mt-0.5">
+                                    <path fill="currentColor"
+                                        d="M9.78 18.65l.28-4.23l7.68-6.92a.5.5 0 0 0-.81-.58L10.28 14L6.11 10.03a.5.5 0 0 0-.76 0a.5.5 0 0 0 0 .71l4.18 3.67l-3.69 5.19a.5.5 0 1 0 .9.44Z" />
+                                </svg>
+                                <span class="text-sm text-muted-foreground">Administração remota com alertas em tempo
+                                    real</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div
+                    class="rounded-lg border bg-card text-card-foreground shadow-sm hover-lift border-primary/20 shadow-md">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <div class="aspect-video bg-primary rounded-lg mb-4 bg-center bg-cover bg-no-repeat"
+                            style="background-image: url('Media/22.jpg')"></div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <h3 class="text-lg font-bold text-secondary mb-2">Instalação de Câmaras de Vigilância (CCTV)
+                        </h3>
+                        <p class="text-muted-foreground text-sm mb-4">Instalação de câmaras IP ou analógicas para
+                            monitoramento interno e externo.</p>
+                        <a href="https://wa.me/+258875070797?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços."
+                            target="_blank">
+                            <button class="p-0 h-auto text-primary underline-offset-4 hover:underline">
+                                Detalhes do Serviço →
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div id="intercom"
+                    class="rounded-lg border bg-card text-card-foreground shadow-sm hover-lift border-primary/20 shadow-md">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <div class="aspect-video bg-primary rounded-lg mb-4 bg-center bg-cover bg-no-repeat"
+                            style="background-image: url('Media/23.jpg')"></div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <h3 class="text-lg font-bold text-secondary mb-2">Instalação de Intercom</h3>
+                        <p class="text-muted-foreground text-sm mb-4">Instalação de dispositivos de comunicação interna
+                            para casas e empresas.</p>
+                        <a href="https://wa.me/+258875070797?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços."
+                            target="_blank">
+                            <button class="p-0 h-auto text-primary underline-offset-4 hover:underline">
+                                Detalhes do Serviço →
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="rounded-lg border bg-card text-card-foreground shadow-sm hover-lift border-primary/20 shadow-md">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <div class="aspect-video bg-primary rounded-lg mb-4 bg-center bg-cover bg-no-repeat"
+                            style="background-image: url('Media/24.jpg')"></div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <h3 class="text-lg font-bold text-secondary mb-2">Informática e Redes</h3>
+                        <p class="text-muted-foreground text-sm mb-4">Instalação e configuração de redes, servidores,
+                            routers e estruturação de IT.</p>
+                        <a href="https://wa.me/+258875070797?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços."
+                            target="_blank">
+                            <button class="p-0 h-auto text-primary underline-offset-4 hover:underline">
+                                Detalhes do Serviço →
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="rounded-lg border bg-card text-card-foreground shadow-sm hover-lift border-primary/20 shadow-md">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <div class="aspect-video bg-primary rounded-lg mb-4 bg-center bg-cover bg-no-repeat"
+                            style="background-image: url('Media/28.jpg')"></div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <h3 class="text-lg font-bold text-secondary mb-2">Integração com Aplicações Móveis</h3>
+                        <p class="text-muted-foreground text-sm mb-4">Permite ao cliente controlar dispositivos
+                            remotamente via app.</p>
+                        <a href="https://wa.me/+258875070797?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços."
+                            target="_blank">
+                            <button class="p-0 h-auto text-primary underline-offset-4 hover:underline">
+                                Detalhes do Serviço →
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div id="casas"
+                    class="rounded-lg border bg-card text-card-foreground shadow-sm hover-lift border-primary/20 shadow-md">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <div class="aspect-video bg-primary rounded-lg mb-4 bg-center bg-cover bg-no-repeat"
+                            style="background-image: url('Media/27.webp')"></div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <h3 class="text-lg font-bold text-secondary mb-2">Casas Inteligentes</h3>
+                        <p class="text-muted-foreground text-sm mb-4">Automação de luzes, portões, cortinas, câmaras,
+                            sensores e mais.</p>
+                        <a href="https://wa.me/+258875070797?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços."
+                            target="_blank">
+                            <button class="p-0 h-auto text-primary underline-offset-4 hover:underline">
+                                Detalhes do Serviço →
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="rounded-lg border bg-card text-card-foreground shadow-sm hover-lift border-primary/20 shadow-md">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <div class="aspect-video rounded-lg mb-4 bg-center bg-cover bg-no-repeat"
+                            style="background-image: url('Media/Instalação\ de\ Vedações\ Elétricas.jpg')"></div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <h3 class="text-lg font-bold text-secondary mb-2">Instalação de Vedações Elétricas</h3>
+                        <p class="text-muted-foreground text-sm mb-4">Instalação de vedações elétricas para maior
+                            segurança
+                            perimetral.</p>
+                        <a href="https://wa.me/+258875070797?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços."
+                            target="_blank">
+                            <button class="p-0 h-auto text-primary underline-offset-4 hover:underline">
+                                Detalhes do Serviço →
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="rounded-lg border bg-card text-card-foreground shadow-sm hover-lift border-primary/20 shadow-md">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <div class="aspect-video bg-primary rounded-lg mb-4 bg-center bg-cover bg-no-repeat"
+                            style="background-image: url('Media/31.jpg')"></div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <h3 class="text-lg font-bold text-secondary mb-2">Instalação de Sistemas de Controlo de Acesso
+                        </h3>
+                        <p class="text-muted-foreground text-sm mb-4">Soluções avançadas de controlo de entradas e
+                            saídas para empresas, condomínios,
+                            escritórios, indústrias e espaços de alta segurança.
+                        </p>
+                        <a href="https://wa.me/+258875070797?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços."
+                            target="_blank">
+                            <button class="p-0 h-auto text-primary underline-offset-4 hover:underline">
+                                Detalhes do Serviço →
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div id="casas"
+                    class="rounded-lg border bg-card text-card-foreground shadow-sm hover-lift border-primary/20 shadow-md">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <div class="aspect-video bg-primary rounded-lg mb-4 bg-center bg-cover bg-no-repeat"
+                            style="background-image: url('Media/32.jpg')"></div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <h3 class="text-lg font-bold text-secondary mb-2">Sistemas de Extinção de Incêndio</h3>
+                        <p class="text-muted-foreground text-sm mb-4">Soluções completas de proteção contra incêndios
+                            para residências, condomínios, escritórios,
+                            indústrias e espaços comerciais.
+                        </p>
+                        <a href="https://wa.me/+258875070797?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços."
+                            target="_blank">
+                            <button class="p-0 h-auto text-primary underline-offset-4 hover:underline">
+                                Detalhes do Serviço →
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="rounded-lg border bg-card text-card-foreground shadow-sm hover-lift border-primary/20 shadow-md">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <div class="aspect-video rounded-lg mb-4 bg-center bg-cover bg-no-repeat"
+                            style="background-image: url('Media/34.jpg')"></div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <h3 class="text-lg font-bold text-secondary mb-2">Instalação de Ar Condicionado</h3>
+                        <p class="text-muted-foreground text-sm mb-4">Sistemas de climatização residencial e comercial
+                            com instalação
+                            certificada e garantia total.
+                        </p>
+                        <a href="https://wa.me/+258875070797?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços."
+                            target="_blank">
+                            <button class="p-0 h-auto text-primary underline-offset-4 hover:underline">
+                                Detalhes do Serviço →
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="rounded-lg border bg-card text-card-foreground shadow-sm hover-lift border-primary/20 shadow-md">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <div class="aspect-video rounded-lg mb-4 bg-center bg-cover bg-no-repeat"
+                            style="background-image: url('Media/35.jpg')"></div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <h3 class="text-lg font-bold text-secondary mb-2">Montagem de Cozinhas Americanas</h3>
+                        <p class="text-muted-foreground text-sm mb-4">Transformação e montagem completa de cozinhas
+                            americanas modernas, com bancada,
+                            ilha, móveis planejados e integração total de eletrodomésticos.
+                        </p>
+                        <a href="https://wa.me/+258875070797?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços."
+                            target="_blank">
+                            <button class="p-0 h-auto text-primary underline-offset-4 hover:underline">
+                                Detalhes do Serviço →
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="rounded-lg border bg-card text-card-foreground shadow-sm hover-lift border-primary/20 shadow-md">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <div class="aspect-video rounded-lg mb-4 bg-center bg-cover bg-no-repeat"
+                            style="background-image: url('Media/36.jpg')"></div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <h3 class="text-lg font-bold text-secondary mb-2">Fabricação e Montagem de Portões</h3>
+                        <p class="text-muted-foreground text-sm mb-4">Portões automáticos e manuais em ferro, alumínio
+                            ou aço inox, fabricados à
+                            medida e com automação das melhores marcas.
+                        </p>
+                        <a href="https://wa.me/+258875070797?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços."
+                            target="_blank">
+                            <button class="p-0 h-auto text-primary underline-offset-4 hover:underline">
+                                Detalhes do Serviço →
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SupportSection -->
+    <section class="section-padding bg-primary text-white">
+        <div class="container-custom">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-sm uppercase tracking-wider mb-4 font-medium opacity-90">OBTENHA SUPORTE</p>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                        Segurança CCTV a caminho
+                    </h2>
+                    <p class="text-lg opacity-90 mb-8 leading-relaxed text-justify">
+                        Na era digital, a segurança e a conectividade são prioridades. A HSS garante uma resposta
+                        rápida, assistência técnica especializada e suporte remoto 24 horas por dia, para que o
+                        seu sistema esteja sempre operacional e protegido.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/+258875070797?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços."
+                            target="_blank">
+                            <button
+                                class="border-2 border-white bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-primary shadow-lg inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-12 rounded-md px-8">
+                                Obtenha uma Cotação
+                            </button>
+                        </a>
+                        <a href="mailto:hss2service@gmail.com"
+                            class="flex items-center gap-2 text-white hover:opacity-80 transition-opacity">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <span class="font-medium">hss2service@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="aspect-square bg-white/10 backdrop-blur-sm rounded-2xl bg-center bg-cover bg-no-repeat"
+                        style="background-image: url('Media/21.png')">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TermsSection -->
+    <section class="section-padding bg-white">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <p class="text-primary text-sm uppercase tracking-wider mb-2 font-semibold">POLÍTICAS</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-secondary mb-6">
+                    TERMOS E CONDIÇÕES GERAIS
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div
+                    class="rounded-lg border bg-card text-card-foreground shadow-sm hover-lift border-primary/20 shadow-md">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="text-4xl font-bold text-primary">01</div>
+                            <h3 class="text-xl font-bold text-secondary mt-2">Garantias</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="space-y-2 text-muted-foreground">
+                            <p class="text-sm leading-relaxed">• Todos os equipamentos têm garantia de 12 meses contra
+                                defeitos de fabrico.</p>
+                            <p class="text-sm leading-relaxed">• A instalação possui garantia de 3 meses, desde que não
+                                haja interferência externa.</p>
+                        </div>
+                        <a href="https://wa.me/+258875070797?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços."
+                            target="_blank">
+                            <button class="p-0 h-auto mt-4 text-primary underline-offset-4 hover:underline">
+                                Saber Mais →
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="rounded-lg border bg-card text-card-foreground shadow-sm hover-lift border-primary/20 shadow-md">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="text-4xl font-bold text-primary">02</div>
+                            <h3 class="text-xl font-bold text-secondary mt-2">Manutenção</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="space-y-2 text-muted-foreground">
+                            <p class="text-sm leading-relaxed">• A HSS oferece planos de manutenção preventiva e
+                                corretiva,
+                                com pacotes mensais, semestrais ou anuais.</p>
+                        </div>
+                        <a href="https://wa.me/+258875070797?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços."
+                            target="_blank">
+                            <button class="p-0 h-auto mt-4 text-primary underline-offset-4 hover:underline">
+                                Saber Mais →
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="rounded-lg border bg-card text-card-foreground shadow-sm hover-lift border-primary/20 shadow-md">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="text-4xl font-bold text-primary">03</div>
+                            <h3 class="text-xl font-bold text-secondary mt-2">Responsabilidades do Cliente</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="space-y-2 text-muted-foreground">
+                            <p class="text-sm leading-relaxed">• Garantir o acesso ao local na data acordada</p>
+                            <p class="text-sm leading-relaxed">• Proteger os equipamentos de fatores externos (chuva,
+                                poeira, vandalismo, corrente eléctrica instável)</p>
+                            <p class="text-sm leading-relaxed">• Seguir as recomendações de uso fornecidas pelos
+                                técnicos</p>
+                        </div>
+                        <a href="https://wa.me/+258875070797?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços."
+                            target="_blank">
+                            <button class="p-0 h-auto mt-4 text-primary underline-offset-4 hover:underline">
+                                Saber Mais →
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="rounded-lg border bg-card text-card-foreground shadow-sm hover-lift border-primary/20 shadow-md">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="text-4xl font-bold text-primary">04</div>
+                            <h3 class="text-xl font-bold text-secondary mt-2">Cancelamentos e Adiamentos</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="space-y-2 text-muted-foreground">
+                            <p class="text-sm leading-relaxed">• Cancelamentos com menos de 24h implicam multa de 20% do
+                                valor do serviço.</p>
+                            <p class="text-sm leading-relaxed">• Alterações de data devem ser comunicadas com 48h de
+                                antecedência.</p>
+                        </div>
+                        <a href="https://wa.me/+258875070797?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços."
+                            target="_blank">
+                            <button class="p-0 h-auto mt-4 text-primary underline-offset-4 hover:underline">
+                                Saber Mais →
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="rounded-lg border bg-card text-card-foreground shadow-sm hover-lift border-primary/20 shadow-md">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="text-4xl font-bold text-primary">05</div>
+                            <h3 class="text-xl font-bold text-secondary mt-2">Privacidade e Dados</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="space-y-2 text-muted-foreground">
+                            <p class="text-sm leading-relaxed">• Todos os dados e imagens captados por dispositivos
+                                instalados são de propriedade do cliente.</p>
+                            <p class="text-sm leading-relaxed">• A HSS compromete-se a não aceder, divulgar ou armazenar
+                                qualquer conteúdo sem autorização.</p>
+                        </div>
+                        <a href="https://wa.me/+258875070797?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços."
+                            target="_blank">
+                            <button class="p-0 h-auto mt-4 text-primary underline-offset-4 hover:underline">
+                                Saber Mais →
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="rounded-lg border bg-card text-card-foreground shadow-sm hover-lift border-primary/20 shadow-md">
+                    <div class="flex flex-col space-y-1.5 p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="text-4xl font-bold text-primary">06</div>
+                            <h3 class="text-xl font-bold text-secondary mt-2">Pagamentos</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="space-y-2 text-muted-foreground">
+                            <p class="text-sm leading-relaxed">• Pagamento negociado no acto do trabalho.</p>
+                        </div>
+                        <a href="https://wa.me/+258875070797?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços."
+                            target="_blank">
+                            <button class="p-0 h-auto mt-4 text-primary underline-offset-4 hover:underline">
+                                Saber Mais →
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PortfolioSection -->
+    <section id="portfolio" class="section-padding bg-section">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <p class="text-primary text-sm uppercase tracking-wider mb-2 font-semibold">PORTFÓLIO</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-secondary mb-6">
+                    Alguns Estudos de Caso
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div
+                    class="rounded-lg border bg-card text-card-foreground shadow-sm hover-lift border-none shadow-lg overflow-hidden group cursor-pointer">
+                    <div class="aspect-[4/3] bg-primary relative overflow-hidden bg-left-top bg-cover bg-no-repeat"
+                        style="background-image: url('Media/3-2.jpg')">
+                        <div
+                            class="absolute inset-0 bg-secondary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <span class="text-white font-semibold">Saber Mais</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span
+                            class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">Vedação
+                            Elétrica</span>
+                        <h3 class="text-lg font-bold text-secondary group-hover:text-primary transition-colors">
+                            Instalação
+                            de Vedação Eléctrica em uma Residência</h3>
+                    </div>
+                </div>
+                <div
+                    class="rounded-lg border bg-card text-card-foreground shadow-sm hover-lift border-none shadow-lg overflow-hidden group cursor-pointer">
+                    <div class="aspect-[4/3] bg-primary relative overflow-hidden bg-cover bg-no-repeat"
+                        style="background-image: url('Media/16.jpg')">
+                        <div
+                            class="absolute inset-0 bg-secondary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <span class="text-white font-semibold">Saber Mais</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span
+                            class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">Câmara
+                            IP</span>
+                        <h3 class="text-lg font-bold text-secondary group-hover:text-primary transition-colors">
+                            Instalação
+                            de CCTV em um Escritório</h3>
+                    </div>
+                </div>
+                <div
+                    class="rounded-lg border bg-card text-card-foreground shadow-sm hover-lift border-none shadow-lg overflow-hidden group cursor-pointer">
+                    <div class="aspect-[4/3] bg-primary relative overflow-hidden bg-cover bg-center bg-no-repeat"
+                        style="background-image: url('Media/19.jpg')">
+                        <div
+                            class="absolute inset-0 bg-secondary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <span class="text-white font-semibold">Saber Mais</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span
+                            class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80">Portões
+                        </span>
+                        <h3 class="text-lg font-bold text-secondary group-hover:text-primary transition-colors">
+                            Instalação
+                            de Portão Automático em uma Residência</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TeamSection -->
+    <section class="section-padding bg-white">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-bold text-secondary mb-6">
+                    Nossa Gestão
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-4">
+                <div class="col-span-1 md:col-span-2 lg:col-span-4 lg:col-start-1">
+                    <div class="max-w-sm mx-auto">
+                        <div
+                            class="rounded-lg border bg-card text-card-foreground shadow-sm hover-lift border-none shadow-lg overflow-hidden group">
+                            <div class="aspect-square bg-primary" style="background-image: url('Media/37.jpg'); background-size: cover;"></div>
+                            <div class="p-6 text-center">
+                                <h3
+                                    class="text-lg font-bold text-secondary mb-1 group-hover:text-primary transition-colors">
+                                    Herminio Siquela Arnaldo Samuel
+                                </h3>
+                                <p class="text-muted-foreground text-sm">Director Geral</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FeaturesSection -->
+    <section class="section-padding bg-section">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <p class="text-primary text-sm uppercase tracking-wider mb-2 font-semibold">CARACTERÍSTICAS</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-secondary mb-6">
+                    DIRETRIZES ESTRATÉGICAS
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
+                <div class="space-y-8">
+                    <div>
+                        <div class="text-5xl font-bold text-primary mb-4">01</div>
+                        <h3 class="text-xl font-bold text-secondary mb-3">Missão</h3>
+                        <p class="text-muted-foreground">
+                            Fornecer soluções inovadoras e seguras com qualidade, compromisso e profissionalismo.
+                        </p>
+                    </div>
+
+                    <div>
+                        <div class="text-5xl font-bold text-primary mb-4">02</div>
+                        <h3 class="text-xl font-bold text-secondary mb-3">Visão</h3>
+                        <p class="text-muted-foreground">
+                            Ser referência nacional em soluções integradas de segurança e automação.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2 flex items-center justify-center">
+                    <div class="relative w-full max-w-md aspect-square">
+                        <div class="absolute inset-0 rounded-3xl bg-primary flex items-center justify-center bg-center bg-cover"
+                            style="background-image: url('Media/26.png')">
+                            <div class="text-center p-8">
+                                <h4 class="text-2xl font-bold text-secondary mb-2">
+
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <div class="text-5xl font-bold text-primary mb-4">03</div>
+                        <h3 class="text-xl font-bold text-secondary mb-3">Valores</h3>
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em"
+                                    viewBox="0 0 24 24" class="w-5 h-5 text-primary">
+                                    <path fill="currentColor"
+                                        d="M9.78 18.65l.28-4.23l7.68-6.92a.5.5 0 0 0-.81-.58L10.28 14L6.11 10.03a.5.5 0 0 0-.76 0a.5.5 0 0 0 0 .71l4.18 3.67l-3.69 5.19a.5.5 0 1 0 .9.44Z" />
+                                </svg>
+                                <span class="text-muted-foreground">Responsabilidade</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em"
+                                    viewBox="0 0 24 24" class="w-5 h-5 text-primary">
+                                    <path fill="currentColor"
+                                        d="M9.78 18.65l.28-4.23l7.68-6.92a.5.5 0 0 0-.81-.58L10.28 14L6.11 10.03a.5.5 0 0 0-.76 0a.5.5 0 0 0 0 .71l4.18 3.67l-3.69 5.19a.5.5 0 1 0 .9.44Z" />
+                                </svg>
+                                <span class="text-muted-foreground">Compromisso</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em"
+                                    viewBox="0 0 24 24" class="w-5 h-5 text-primary">
+                                    <path fill="currentColor"
+                                        d="M9.78 18.65l.28-4.23l7.68-6.92a.5.5 0 0 0-.81-.58L10.28 14L6.11 10.03a.5.5 0 0 0-.76 0a.5.5 0 0 0 0 .71l4.18 3.67l-3.69 5.19a.5.5 0 1 0 .9.44Z" />
+                                </svg>
+                                <span class="text-muted-foreground">Profissionalismo</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.25em" height="1.25em"
+                                    viewBox="0 0 24 24" class="w-5 h-5 text-primary">
+                                    <path fill="currentColor"
+                                        d="M9.78 18.65l.28-4.23l7.68-6.92a.5.5 0 0 0-.81-.58L10.28 14L6.11 10.03a.5.5 0 0 0-.76 0a.5.5 0 0 0 0 .71l4.18 3.67l-3.69 5.19a.5.5 0 1 0 .9.44Z" />
+                                </svg>
+                                <span class="text-muted-foreground">Credibilidade</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="text-5xl font-bold text-primary mb-4">04</div>
+                        <h3 class="text-xl font-bold text-secondary mb-3">Objetivos</h3>
+                        <p class="text-muted-foreground">
+                            Oferecer soluções personalizadas, acessíveis e de alta qualidade, promovendo segurança e
+                            inovação tecnológica em Moçambique.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ContactSection -->
+    <section id="contacto" class="section-padding bg-secondary text-white">
+        <div class="container-custom">
+            <div class="text-center mb-12">
+                <p class="text-sm uppercase tracking-wider mb-2 font-semibold opacity-90">Contacto</p>
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                    Fale Connosco
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Entre em Contacto</h3>
+                    <p class="text-lg opacity-90 mb-8 leading-relaxed">
+                        Estamos aqui para ajudar com qualquer dúvida ou necessidade. Preencha o formulário ou entre em
+                        contacto diretamente.
+                    </p>
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Nome</label>
+                            <input type="text" id="name"
+                                class="w-full rounded-md border border-gray-300 bg-white px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
+                                placeholder="Seu nome" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" id="email"
+                                class="w-full rounded-md border border-gray-300 bg-white px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
+                                placeholder="Seu email" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Mensagem</label>
+                            <textarea id="message"
+                                class="w-full rounded-md border border-gray-300 bg-white px-4 py-3 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary"
+                                rows="5" placeholder="Sua mensagem" required></textarea>
+                        </div>
+                        <button type="submit"
+                            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg h-12 px-8">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Informações de Contacto</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"
+                                class="w-6 h-6 text-white/90">
+                                <path fill="currentColor"
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z" />
+                            </svg>
+                            <div>
+                                <p class="font-semibold">Endereço</p>
+                                <p class="text-white/90">Maputo, Moçambique</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <div>
+                                <p class="font-semibold">Telefone</p>
+                                <a href="tel:+258875070797" class="text-white/90 hover:underline">+258 87 507 0797</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <div>
+                                <p class="font-semibold">Email</p>
+                                <a href="mailto:hss2service@gmail.com"
+                                    class="text-white/90 hover:underline">hss2service@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white text-black py-12">
+        <div class="container-custom">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="rounded-full flex items-center justify-center">
+                            <img src="3 - sem fundo.png" alt="HSS Logo" style="width: 118px; height: 78px;">
+                        </div>
+                        <span class="text-2xl font-bold">HERBET SECURITY E SERVICE E.I</span>
+                    </div>
+                    <p class="text-sm text-black/80 leading-relaxed text-justify">
+                        Soluções integradas de segurança e automação para residências e empresas em Moçambique, com mais
+                        de 10 anos de experiência.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#2" class="text-black/80 hover:black transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                style="fill: rgb(54, 54, 54);transform: 0;">
+                                <path
+                                    d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/+258875070797?text=Olá%2C%20gostaria%20de%20mais%20informações%20sobre%20seus%20serviços."
+                            target="_blank" class="text-black/80 hover:black transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                style="fill: rgb(54, 54, 54);transform: 0;">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M18.403 5.633A8.919 8.919 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977 0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a8.981 8.981 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.926 8.926 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.446 7.446 0 0 1-3.798-1.041l-.272-.162-2.824.741.753-2.753-.177-.282a7.448 7.448 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.413 7.413 0 0 1 5.275 2.188 7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73-.205-.075-.354-.112-.504.112s-.58.729-.711.879-.262.168-.486.056-.947-.349-1.804-1.113c-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393.112-.131.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666-.181-.435-.366-.377-.504-.383a9.65 9.65 0 0 0-.429-.008.826.826 0 0 0-.599.28c-.206.225-.785.767-.785 1.871s.804 2.171.916 2.321c.112.15 1.582 2.415 3.832 3.387.536.231.954.369 1.279.473.537.171 1.026.146 1.413.089.431-.064 1.327-.542 1.514-1.066.187-.524.187-.973.131-1.067-.056-.094-.207-.151-.43-.263">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#2" class="text-black/80 hover:black transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                style="fill: rgb(54, 54, 54);transform: 0;">
+                                <path
+                                    d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z">
+                                </path>
+                                <circle cx="16.806" cy="7.207" r="1.078"></circle>
+                                <path
+                                    d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-3 text-sm text-black/80">
+                        <li><a href="#inicio" class="hover:black transition-colors hover:underline">Início</a>
+                        </li>
+                        <li><a href="#sobre" class="hover:black transition-colors hover:underline">Sobre Nós</a>
+                        </li>
+                        <li><a href="#servicos" class="hover:black transition-colors hover:underline">Serviços</a></li>
+                        <li><a href="#portfolio" class="hover:black transition-colors hover:underline">Portfólio</a>
+                        </li>
+                        <li><a href="#contacto" class="hover:black transition-colors hover:underline">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Serviços</h4>
+                    <ul class="space-y-3 text-sm text-black/80">
+                        <li><a href="#servicos" class="hover:black transition-colors hover:underline">CCTV</a>
+                        </li>
+                        <li><a href="#intercom" class="hover:black transition-colors hover:underline">Dispositivos
+                                Intercom</a>
+                        </li>
+                        <li><a href="#casas" class="hover:black transition-colors hover:underline">Casas
+                                Inteligentes</a></li>
+                        <li><a href="#servicos" class="hover:black transition-colors hover:underline">Automação
+                                de Portões</a></li>
+                        <li><a href="#intercom" class="hover:black transition-colors hover:underline">Informática
+                                e Redes</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contacto</h4>
+                    <ul class="space-y-3 text-sm text-black/80">
+                        <li>
+                            <div class="flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"
+                                    class="w-5 h-5">
+                                    <path fill="currentColor"
+                                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z" />
+                                </svg>
+                                <span>Mozal, Maputo, Moçambique</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-center gap-2">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <a href="tel:+258875070797" class="hover:black transition-colors hover:underline">+258
+                                    87 507 0797</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-center gap-2">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <a href="mailto:hss2service@gmail.com"
+                                    class="hover:black transition-colors hover:underline">hss2service@gmail.com</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-secondary-foreground/20">
+                <div class="flex flex-col md:flex-row justify-between items-center text-sm text-black/80">
+                    <p>&copy; 2025 HERBET SECURITY E SERVICE E.I. Todos os direitos reservados.</p>
+                    <div class="flex gap-6 mt-4 md:mt-0">
+                        <a href="#" class="hover:black transition-colors hover:underline">Política de
+                            Privacidade</a>
+                        <a href="#" class="hover:black transition-colors hover:underline">Termos de Uso</a>
+                        <a href="#" class="hover:black transition-colors hover:underline">FAQ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.querySelector('.lg\\:hidden.text-secondary');
+        const mobileMenu = document.querySelector('nav.lg\\:hidden');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
